@@ -1,0 +1,21 @@
+### Get all analysis results
+GET http://localhost:7071/api/results
+
+### Get a specific analysis result (replace the ID with an actual one)
+GET http://localhost:7071/api/results/58571e1c-4aa7-4085-a14e-968ee7837791
+
+### Get results with a limit (last 5)
+GET http://localhost:7071/api/results?limit=5
+
+### Get results for a specific blob (if you implement this endpoint)
+# GET http://localhost:7071/api/results?blobName=test_image.png
+
+### Check if the function app is running (health check)
+GET http://localhost:7071/api/results
+HTTP/1.1 200 OK
+
+### Alternative: Get full analysis details
+# GET http://localhost:7071/api/results/{id?}
+
+### Test production endpoint (replace with your Azure URL when deployed)
+# GET https://yourname-image-analyzer.azurewebsites.net/api/results
